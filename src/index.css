@@ -1,0 +1,37 @@
+
+
+/* Add your smooth scroll here too */
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  color: white;
+}
+
+/* This class will act as your 'New Page' */
+.image-overlay {
+  position: fixed;
+  inset: 0;
+  /* Use a solid color to block out the terminal behind it */
+  background-color: #000; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* This MUST be higher than your .scanlines z-index (10) */
+  z-index: 9999; 
+  padding: 20px;
+}
+
+.image-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
