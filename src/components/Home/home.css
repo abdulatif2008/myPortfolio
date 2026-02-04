@@ -23,17 +23,26 @@
     border-radius: 50px;
     box-shadow: inset 0 0 20px #000, 10px 10px 50px rgba(0,0,0,0.5);
     border: 4px solid #333;
+    overflow: hidden;
   }
   
   .crt-screen {
-    width: 800px;
+    width: 100%;
     height: 500px;
+  
     background: var(--bg);
     position: relative;
+    aspect-ratio: 16 / 10;
     padding: 20px;
     overflow: hidden;
     border: 10px solid #111;
     box-shadow: 0 0 30px rgba(51, 255, 51, 0.1);
+   
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    
+    
   }
   
   
@@ -160,3 +169,163 @@
   .closebtn{
     margin-bottom:30px;
   }
+
+
+
+
+  
+  /* ====== Small laptops / large tablets ====== */
+@media (max-width: 1024px) {
+  .crt-screen {
+    width: 92vw;
+    height: 65vh;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    left: 30px;
+    right: 30px;
+    top: 40px;
+    bottom: 40px;
+  }
+
+  .image-modal img {
+    width: 90%;
+  }
+}
+
+/* ====== Tablets ====== */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .crt-container {
+    padding: 16px;
+  }
+
+  .crt-bezel {
+    padding: 24px;
+    border-radius: 32px;
+  }
+
+  .crt-screen {
+    width: 100%;
+    height: 60vh;
+    padding: 14px;
+  }
+
+  .input-line {
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .modal {
+    position: fixed;
+    inset: 16px;
+    overflow-y: auto;
+  }
+
+  .image-overlay {
+    align-items: center;
+  }
+
+  .image-modal {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .image-modal img {
+    width: 100%;
+  }
+}
+
+
+/* ====== Mobile ====== */
+@media (max-width: 480px) {
+  .crt-bezel {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .crt-screen {
+    height: 55vh;
+    border-width: 6px;
+  }
+
+  .history {
+    font-size: 0.85rem;
+  }
+
+  .view-title {
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .pictures-btn,
+  .back-btn,
+  .closebtn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .modal h3 {
+    font-size: 1rem;
+  }
+
+  .modal p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ====== Very small phones ====== */
+@media (max-width: 360px) {
+  .crt-screen {
+    height: 50vh;
+  }
+
+  input {
+    font-size: 0.85rem;
+  }
+
+  .cursor {
+    height: 16px;
+  }
+}
+
+/* ====== Landscape phones ====== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .crt-screen {
+    height: 85vh;
+  }
+
+  .modal {
+    inset: 10px;
+  }
+
+  .image-modal img {
+    width: 80%;
+  }
+}

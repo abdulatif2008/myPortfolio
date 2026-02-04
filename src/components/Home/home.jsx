@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Cpu, Globe, Code, Zap, Ghost, Mail, Github, ExternalLink } from 'lucide-react';
+import {Cpu, Globe, Code, Zap, Ghost, Mail, Github, } from 'lucide-react';
 import './home.css'
 import flow1 from '../img/flow2.jpg';
 import flow2 from '../img/flow1.jpg'
@@ -13,10 +13,7 @@ import mock2 from '../img/mock2.jpg'
 import liga1 from '../img/liga1.jpg'
 import liga2 from '../img/liga2.jpg'
 
-const CRT_THEME = {
-  green: "#33ff33",
-  glow: "0 0 10px rgba(51, 255, 51, 0.7)",
-};
+
 
 export default function RetroPortfolio() {
   const [input, setInput] = useState('');
@@ -85,8 +82,8 @@ export default function RetroPortfolio() {
                       <p><Cpu size={14}/> age: 17 (Data Encrypted)</p>
                       <p><Globe size={14}/> location: Andijan, Asaka</p>
                       <p><Code size={14}/> education: 60-general school GPA: 4.86 / 5.00. <br /> Studied Frontend development and programming fundamentals in Turon Talim. <br /> 4 Years of intensive english learner at English Life. <br />
-                        English Proficient with CEFR b2(62). <br />SAT preparation - Started December 2025. </p>
-                      <p><Zap size={14}/> PURPOSE: Being founder of start-ups that have benefits for people and loved by people. (The only solution is: Creativity)</p>
+                        English Proficient with CEFR b2(62). <br />SAT preparation - Started January 2026. </p>
+                      <p><Zap size={14}/> PURPOSE: Being founder of start-ups that have benefits for people and loved by people.</p>
                     </div>
                   </ContentView>
                 )}
@@ -106,7 +103,7 @@ export default function RetroPortfolio() {
                 {currentView === 'interests' && (
                   <ContentView title="User Interests" onBack={() => setCurrentView('terminal')}>
                     <div className="interests-bubbles">
-                      {['CREATING STUFF: Make imaginations become real', 'MOVIES: love insparition & survival movies', 'CHESS: chess player with tactical preference. Second ranked at school.', 'FOOTBALL: highly skilled player. Football tournament winner with school.', ' DRAWING: skilled as can draw next Mona Lisa'].map(item => (
+                      {['CREATING STUFF: Turning imagination into reality', 'MOVIES: love insparition & survival movies', 'CHESS: chess player with tactical preference. Second ranked at school.', 'FOOTBALL: highly skilled player. Football tournament winner with school.', ' DRAWING: skilled as can draw next Mona Lisa'].map(item => (
                         <motion.div whileHover={{ scale: 1.1, color: '#fff' }} className="bubble" key={item}>
                           [{item}]
                         </motion.div>
