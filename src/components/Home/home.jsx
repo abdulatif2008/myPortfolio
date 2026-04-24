@@ -9,7 +9,6 @@ import book2 from '../img/book2.jpg'
 import gilam1 from '../img/gilam1.jpg'
 import gilam2 from '../img/gilam2.jpg'
 import mock1 from '../img/mock1.jpg'
-import mock2 from '../img/mock2.jpg'
 import liga1 from '../img/liga1.jpg'
 import liga2 from '../img/liga2.jpg'
 import consult from '../img/consult1.jpg'
@@ -21,10 +20,10 @@ import coin2 from '../img/coin2.jpg'
 
 export default function RetroPortfolio() {
   const [input, setInput] = useState('');
-  const [history, setHistory] = useState(['SYSTEM READY...', 'TYPE "HELP" TO SEE COMMANDS']);
   const [currentView, setCurrentView] = useState('terminal'); // 'terminal', 'about', 'projects', etc.
   const [isBooting, setIsBooting] = useState(true);
 
+  const [history, setHistory] = useState(['SYSTEM READY...', 'TYPE "HELP" TO SEE COMMANDS']);
   useEffect(() => {
     setTimeout(() => setIsBooting(false), 2000);
   }, []);
