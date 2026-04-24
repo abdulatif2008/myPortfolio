@@ -12,6 +12,10 @@ import mock1 from '../img/mock1.jpg'
 import mock2 from '../img/mock2.jpg'
 import liga1 from '../img/liga1.jpg'
 import liga2 from '../img/liga2.jpg'
+import consult from '../img/consult1.jpg'
+import consult2 from '../img/consult2.jpg'
+import coin1 from '../img/coin1.jpg'
+import coin2 from '../img/coin2.jpg'
 
 
 
@@ -79,7 +83,7 @@ export default function RetroPortfolio() {
                   <ContentView title="Abdulatifs information" onBack={() => setCurrentView('terminal')}>
                     <div className="grid-layout">
                         <p>Full name: Abdurahmonov Abdulatif</p>
-                      <p><Cpu size={14}/> age: 17 (Data Encrypted)</p>
+                      <p><Cpu size={14}/> age: 18 (Data Encrypted)</p>
                       <p><Globe size={14}/> location: Andijan, Asaka</p>
                       <p><Code size={14}/> education: 60-general school GPA: 4.86 / 5.00. <br /> Studied Frontend development and programming fundamentals in Turon Talim. <br /> 4 Years of intensive english learner at English Life. <br />
                         English Proficient with CEFR b2(62). <br />SAT preparation - Started January 2026. </p>
@@ -91,10 +95,10 @@ export default function RetroPortfolio() {
                 {currentView === 'experience' && (
                   <ContentView title="User Experience" onBack={() => setCurrentView('terminal')}>
                     <ul className="pixel-list">
-                        <li>Support Teacher & Frontend Developer | TimeSchool, Andijan 2025 - Present</li>
+                        <li>Support Teacher & Frontend Developer | TimeSchool, Andijan </li>
                       <li>Freelance Frontend Developer | Remote | 5 months</li>
                       <li>Interactive UI Designer: Framer Motion / Three.js</li>
-                      <li>Head Coder of Small programmer team</li>
+                      <li>Head Coder of programmers team</li>
                       <li>Status: Available for freelance high-stakes missions</li>
                     </ul>
                   </ContentView>
@@ -152,11 +156,15 @@ const ProjectGrid = ({ onBack }) => {
   const [showImages, setShowImages] = useState(false);
 
   const projects = [
-    { id: 1, name: "Flow Tracker", images: [flow1, flow2], desc: "Future version of daily journal", longDesc: "description: Another level of daily journal where you can write your daily thought in addition add tasks in the beginning of the day as to do list. It tracks your daily, weekly and monhly  progress with clean dashboard.", Problem: "Probem & Goal: Problem - most people can't track their daily life and plan their day as most of people forget their main task of the day. Goal- Reminding users their tasks to do in a day and keeping their progress as they can analyze their daily life.", Role: "Role: Full-Stack coder", Year: "Year: 2025", Status: "tracker-53c63.web.app"  },
-    { id: 2, name: "Asaka Superliga", images:[liga1, liga2  ], desc: "Oficcial web-site for local football club.", longDesc: "description: Main idea of website is sharing matches,goals,players and most importantly table of league for fans. Used react.js and django rest-framework to build with jazzmin controllable admin panel.", Problem: "Problem - A lot of fans including me had a difficuly to see stats, clubs and ranking of table. There was almost no source to follow league news. Goal - Fans can now be aware of every upcoming and finished games with scored goals and ranking of clubs as table. Fans and league organizators are pretty happy from this solution.", Role: "Role: Full-Stack programmer", Year: "Year: 2025" },
-    {id: 3, name: "BookShare", images:[book1,book2], desc: "Platform to exchange books you finished.", longDesc: "As we see lot's of people who love reading are not always able to buy new book, we build this platform where you can swap books with others or you also can sell your book if you already red it.", Problem: "Problem - As I said, not every book lover is able to buy new book often. Goal - Giving people chance to read book they want to read by exchanging book they already finished. As we expect lots of users loved and gave thankfull commentaries to our team.", Role: "Role: Backend programmer", Year: "Year: 2025"},
-    {id: 4, name: "Ideal Gilam", images:[gilam1, gilam2], desc: "Web platform for carpet washing factory.", longDesc: "Carpet factory booked this platform to manage whole factory. Controlling orders, workers, and can see daily,weekly,monthly and yearly profit with profiles for each worker. Features with adding orders, new workers and changing worker roles.", Problem: "Problem - before this project factory had not any journal to track everything which affected negatively to factory's budget said its owner. Goal - Monitoring everything in the factory from small expenses to workers and accessing every workers live information.", Role: "ROle: Frontend programmer", Year: "Year: 2024", Status: "Paused due to seasonal operations" },
-    {id: 5, name: "Mock-Zone", images:[mock1, mock2], desc: "CD IELTS mock platofrm with exact atmosphere as real IELTS exam.", longDesc: "Platform for not only test users IELTS skills but also give them real atmosphere of DC exam and make them ready for real IELTS test.", Problem: "Problem - Paper IELTS no more available in Uzbekistan which means students can have problem with CD one. Especially for students who do not know use computer well enough. \n Goal - Help IELTS preparations to understand CD IELTS before their real exam,In additon set up for education centres as weekly mock exam.", Role: "Role: Fulll-Stack coder", Year: "Year: Ongoing...", Status: "Not on production yet..."}
+    {id: 1, name: "Coin System", images:[coin1, coin2], desc: "Coin System project for education center.", longDesc: "Coin System for students that they can collect coins and buy valuable items for their coins", Problem: "Problem -  There is no problem, project created just to make education center more entertaining \n Goal - Creating site with 3 main windows: Admin, Teachers and Students", Role: "Role: Frontend, Baackend coder & DevOPS", Year: "Year: 2026", Status: "ti-coin.uz"},
+    {id: 2, name: "EVROtime Consulting", images:[consult, consult2], desc: "Landing page web-site for consulting firm.", longDesc: "Web-site where users can interact and get info about consulting firm.The site shows whole information about the firm.", Problem: "Problem - Client asked for landing page web-site with all socials of firm that people can contact. \n Goal - Creating trusty, well-developed site with amazing design.", Role: "Role: Fulll-Stack coder", Year: "2026", Status: "yevropadaish.uz"},
+    { id: 3, name: "Flow Tracker", images: [flow1, flow2], desc: "Future version of daily journal", longDesc: "description: Another level of daily journal where you can write your daily thought in addition add tasks in the beginning of the day as to do list. It tracks your daily, weekly and monhly  progress with clean dashboard.", Problem: "Probem & Goal: Problem - most people can't track their daily life and plan their day as most of people forget their main task of the day. Goal- Reminding users their tasks to do in a day and keeping their progress as they can analyze their daily life.", Role: "Role: Full-Stack coder", Year: "Year: 2025", Status: "tracker-53c63.web.app"  },
+    { id: 4, name: "Asaka Superliga", images:[liga1, liga2  ], desc: "Oficcial web-site for local football club.", longDesc: "description: Main idea of website is sharing matches,goals,players and most importantly table of league for fans. Used react.js and django rest-framework to build with jazzmin controllable admin panel.", Problem: "Problem - A lot of fans including me had a difficuly to see stats, clubs and ranking of table. There was almost no source to follow league news. Goal - Fans can now be aware of every upcoming and finished games with scored goals and ranking of clubs as table. Fans and league organizators are pretty happy from this solution.", Role: "Role: Full-Stack programmer", Year: "Year: 2025" },
+    {id: 5, name: "BookShare", images:[book1,book2], desc: "Platform to exchange books you finished.", longDesc: "As we see lot's of people who love reading are not always able to buy new book, we build this platform where you can swap books with others or you also can sell your book if you already red it.", Problem: "Problem - As I said, not every book lover is able to buy new book often. Goal - Giving people chance to read book they want to read by exchanging book they already finished. As we expect lots of users loved and gave thankfull commentaries to our team.", Role: "Role: Backend programmer", Year: "Year: 2025"},
+    {id: 6, name: "Ideal Gilam", images:[gilam1, gilam2], desc: "Web platform for carpet washing factory.", longDesc: "Carpet factory booked this platform to manage whole factory. Controlling orders, workers, and can see daily,weekly,monthly and yearly profit with profiles for each worker. Features with adding orders, new workers and changing worker roles.", Problem: "Problem - before this project factory had not any journal to track everything which affected negatively to factory's budget said its owner. Goal - Monitoring everything in the factory from small expenses to workers and accessing every workers live information.", Role: "ROle: Frontend programmer", Year: "Year: 2024", Status: "Paused due to seasonal operations" },
+    {id: 7, name: "Mock-Zone", images:[mock1], desc: "CD IELTS mock platofrm with exact atmosphere as real IELTS exam.", longDesc: "Platform for not only test users IELTS skills but also give them real atmosphere of DC exam and make them ready for real IELTS test.", Problem: "Problem - Paper IELTS no more available in Uzbekistan which means students can have problem with CD one. Especially for students who do not know use computer well enough. \n Goal - Help IELTS preparations to understand CD IELTS before their real exam,In additon set up for education centres as weekly mock exam.", Role: "Role: Fulll-Stack coder", Year: "Year: Ongoing...", Status: "Not on production yet..."},
+
+  
   ];
 
   return (
